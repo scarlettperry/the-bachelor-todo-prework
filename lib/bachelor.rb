@@ -49,5 +49,17 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  # code here
+average_array = []
+
+  data.each do |season_num, info|
+    if season_num == season.to_sym
+      info.each do |contestant|
+        average_array << contestant.values[1].to_i
+      end
+    end
+  end
+
+average = average_array.inject{|x,y| x+y}.to_f / average_array.size
+  
+average.ceil
 end
