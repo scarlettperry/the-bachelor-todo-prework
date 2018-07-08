@@ -54,7 +54,7 @@ average_array = []
   data.each do |season_num, info|
     if season_num == season
       info.each do |contestant|
-        average_array << contestant.values[1]
+        average_array << contestant.values[1].to_i
       end
     end
   end
