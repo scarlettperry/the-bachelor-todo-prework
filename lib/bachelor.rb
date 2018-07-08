@@ -61,5 +61,5 @@ average_array = []
 
 average = average_array.inject{|x,y| x+y}.to_f / average_array.size
   
-average.ceil
+average.round
 end
